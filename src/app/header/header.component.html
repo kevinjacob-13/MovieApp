@@ -6,10 +6,13 @@
         <span class="fs-4">Movie App</span>
       </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+      <ul class="nav nav-pills" *ngIf="!user">
+        <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/Login">Login</a></li>
+      </ul>
+      <ul class="nav nav-pills" *ngIf="user">
+        <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="logout()" routerLink="/Login">Logout</a></li>
       </ul>
     </header>
   </div>
