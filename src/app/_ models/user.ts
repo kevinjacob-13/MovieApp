@@ -6,4 +6,5 @@ export class User {
     emailAddress: string;
     role: Role;
     token?: string;
+    expiration?: Date;
 }

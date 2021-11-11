@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule,HttpClient} from '@angular/common/http';
+import { HttpClientModule,HttpClient,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -12,6 +12,12 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { MovieItemComponent } from './movies/movie-list/movie-item/movie-item.component';
 import { LoginComponent } from './login/login.component';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { AdminComponent } from './admin/admin.component';
+import { ActorComponent } from './actor/actor.component';
+import { EditActorComponent } from './actor/edit-actor/edit-actor.component';
+import { ViewActorMoviesComponent } from './actor/view-actor-movies/view-actor-movies.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,11 @@ import { LoginComponent } from './login/login.component';
     MovieListComponent,
     MovieDetailComponent,
     MovieItemComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    ActorComponent,
+    EditActorComponent,
+    ViewActorMoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +40,11 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [HttpClientModule,MovieService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    HttpClientModule,
+    MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

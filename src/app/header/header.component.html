@@ -12,6 +12,8 @@
       </ul>
       <ul class="nav nav-pills" *ngIf="user">
         <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/Admin" *ngIf="isAdmin">Admin</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/Actor" *ngIf="!isAdmin">Actor</a></li>
         <li class="nav-item"><a class="nav-link" (click)="logout()" routerLink="/Login">Logout</a></li>
       </ul>
     </header>
