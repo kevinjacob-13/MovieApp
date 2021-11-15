@@ -30,7 +30,9 @@ export class ActorService {
     formData["Picture"] = "";
     console.log(formData);
     return this.http.put(this.rootURL + '/people/' + userid["userID"], formData);
-
   }
-
+  getActorMovies(): Observable<any>{
+    var userid = JSON.parse(localStorage.getItem('user'));
+    return this.http.get(this.rootURL + '/moviesactors/' + userid["userID"]);
+  }
 }
