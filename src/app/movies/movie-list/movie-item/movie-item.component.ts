@@ -20,7 +20,8 @@ import { Movie } from '../../movie.model';
     constructor(private movieService:MovieService) { }  
 
     ngOnInit() {   
-      //this.loadAllMovies();  
+      //this.loadAllMovies();
+      console.log(this.movie);
     }  
     // loadAllMovies() {  
     //   // this.allMovies = this.movieService.getAllMovies();
