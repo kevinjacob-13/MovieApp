@@ -18,6 +18,12 @@ import { AdminComponent } from './admin/admin.component';
 import { ActorComponent } from './actor/actor.component';
 import { EditActorComponent } from './actor/edit-actor/edit-actor.component';
 import { ViewActorMoviesComponent } from './actor/view-actor-movies/view-actor-movies.component';
+import { CreateactorComponent } from './admin/createactor/createactor.component';
+import { EditactorComponent } from './admin/editactor/editactor.component';
+import { DeleteactorComponent } from './admin/deleteactor/deleteactor.component';
+import { CreatemovieComponent } from './admin/createmovie/createmovie.component';
+import { EditmovieComponent } from './admin/editmovie/editmovie.component';
+import { DeletemovieComponent } from './admin/deletemovie/deletemovie.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,13 @@ import { ViewActorMoviesComponent } from './actor/view-actor-movies/view-actor-m
     AdminComponent,
     ActorComponent,
     EditActorComponent,
-    ViewActorMoviesComponent
+    ViewActorMoviesComponent,
+    CreateactorComponent,
+    EditactorComponent,
+    DeleteactorComponent,
+    CreatemovieComponent,
+    EditmovieComponent,
+    DeletemovieComponent
   ],
   imports: [
     BrowserModule,

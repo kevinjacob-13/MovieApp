@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\actor\\edit-actor",
+    "\\src\\app\\actor\\view-actor-movies",
+    "\\src\\app\\movies\\movie-list",
+    "\\src\\app\\movies\\movie-list\\movie-item"
   ],
-  "SelectedNode": "\\src\\app\\login",
+  "SelectedNode": "\\src\\app\\actor",
   "PreviewInSolutionExplorer": false
 }

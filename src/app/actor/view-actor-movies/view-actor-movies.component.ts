@@ -17,7 +17,7 @@ export class ViewActorMoviesComponent implements OnInit {
 
   getActorMoviesList() {
     this.service.getActorMovies().subscribe((response) => {
-      this.actorMovies = []
+      //this.actorMovies = []
       this.actorMovies.push(response)
     });
     console.log(this.actorMovies);
