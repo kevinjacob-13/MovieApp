@@ -19,7 +19,8 @@ export class CreateactorComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    this.service.postMovie(form.value).subscribe(res => {
+    console.log(form);
+    this.service.postActor(form.value).subscribe(res => {
       console.log(res);
 /*      this.resetForm(form);*/
 /*      this.service.refreshList();*/

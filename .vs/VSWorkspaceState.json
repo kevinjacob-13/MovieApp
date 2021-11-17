@@ -3,11 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\actor\\edit-actor",
-    "\\src\\app\\actor\\view-actor-movies",
-    "\\src\\app\\movies\\movie-list",
-    "\\src\\app\\movies\\movie-list\\movie-item"
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\createactor",
+    "\\src\\app\\admin\\createmovie",
+    "\\src\\app\\movies"
   ],
-  "SelectedNode": "\\src\\app\\actor",
+  "SelectedNode": "\\src\\app\\admin\\createmovie\\createmovie.component.ts",
   "PreviewInSolutionExplorer": false
 }
