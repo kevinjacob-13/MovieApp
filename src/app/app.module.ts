@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule,HttpClient,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +25,7 @@ import { DeleteactorComponent } from './admin/deleteactor/deleteactor.component'
 import { CreatemovieComponent } from './admin/createmovie/createmovie.component';
 import { EditmovieComponent } from './admin/editmovie/editmovie.component';
 import { DeletemovieComponent } from './admin/deletemovie/deletemovie.component';
+import { CastactorComponent } from './admin/castactor/castactor.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +45,12 @@ import { DeletemovieComponent } from './admin/deletemovie/deletemovie.component'
     DeleteactorComponent,
     CreatemovieComponent,
     EditmovieComponent,
-    DeletemovieComponent
+    DeletemovieComponent,
+    CastactorComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

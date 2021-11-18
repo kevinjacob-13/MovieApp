@@ -39,6 +39,15 @@ export class AdminService {
     return this.http.post(this.rootURL + '/accounts/Create', formData);
   }
 
+  postMoviesActor(formData: any) {
+    let req = {};
+    req["PersonId"] = this.actorSelected;
+    req["MovieId"] = this.movieSelected;
+    req["Character"] = formData.Character;
+    console.log(req);
+    return this.http.post(this.rootURL + '/moviesactors', req);
+  }
+
   getAllMovies(): Observable<any> {
     return this.http.get(this.rootURL + '/movies/');
   }

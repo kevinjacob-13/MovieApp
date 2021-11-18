@@ -13,6 +13,7 @@ import { EditActorComponent } from './actor/edit-actor/edit-actor.component';
 import { ViewActorMoviesComponent } from './actor/view-actor-movies/view-actor-movies.component';
 import { EditmovieComponent } from './admin/editmovie/editmovie.component';
 import { EditactorComponent } from './admin/editactor/editactor.component';
+import { CastactorComponent } from './admin/castactor/castactor.component';
 
 const routes: Routes = [
     {
@@ -63,7 +64,7 @@ const routes: Routes = [
     },
     {
       path: 'Admin/castActor',
-      component: AdminComponent,
+      component: CastactorComponent,
       canActivate: [AuthGuard],
       data: { roles: [Role.Admin] }
     },
