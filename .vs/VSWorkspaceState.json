@@ -4,10 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\admin",
+    "\\src\\app\\admin\\castactor",
     "\\src\\app\\admin\\createactor",
-    "\\src\\app\\admin\\createmovie",
     "\\src\\app\\movies"
   ],
-  "SelectedNode": "\\src\\app\\admin\\createmovie\\createmovie.component.ts",
   "PreviewInSolutionExplorer": false
 }
