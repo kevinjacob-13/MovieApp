@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -9,13 +10,14 @@ import { AdminService } from '../admin.service';
 })
 export class CreatemovieComponent implements OnInit {
 
-  constructor(private service: AdminService) { }
+  constructor(private service: AdminService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm) {
     this.insertRecord(form);
+    this.router.navigateByUrl('/Admin');
   }
 
   insertRecord(form: NgForm) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -9,14 +10,16 @@ import { AdminService } from '../admin.service';
 })
 export class EditactorComponent implements OnInit {
   actor: any = [];
-  constructor(public service: AdminService) { }
+  constructor(public service: AdminService, private router: Router) { }
 
   ngOnInit(): void {
     this.getActorByActorId();
+    
   }
 
   onSubmit(form: NgForm) {
     this.updateRecord(form);
+    this.router.navigateByUrl('/Admin');
   }
 
   getActorByActorId() {

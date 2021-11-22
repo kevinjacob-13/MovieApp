@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AdminService } from '../admin.service';
 })
 export class EditmovieComponent implements OnInit {
   movie: any = [];
-  constructor(public service: AdminService) { }
+  constructor(public service: AdminService, private router: Router) { }
 
   ngOnInit(): void {
     this.getMovieByMovieId();
@@ -17,6 +18,7 @@ export class EditmovieComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.updateRecord(form);
+    this.router.navigateByUrl('/Admin');
   }
 
   getMovieByMovieId() {
